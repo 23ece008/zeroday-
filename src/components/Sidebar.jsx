@@ -6,7 +6,11 @@ import {
   Search, 
   Calendar, 
   MessageSquare,
-  BookOpen
+  BookOpen,
+  Briefcase,
+  Newspaper,
+  BarChart3,
+  Utensils
 } from 'lucide-react';
 import './Sidebar.css';
 
@@ -17,7 +21,11 @@ const Sidebar = ({ isCollapsed }) => {
     { path: '/lost-found', icon: Search, label: 'Lost & Found' },
     { path: '/timetable', icon: Calendar, label: 'Timetable' },
     { path: '/complaints', icon: MessageSquare, label: 'Complaints' },
-    { path: '/skill-exchange', icon: BookOpen, label: 'Skill Exchange' }
+    { path: '/on-duty', icon: Briefcase, label: 'On-Duty' },
+    { path: '/canteen', icon: Utensils, label: 'Canteen Prebook' },
+    { path: '/skill-exchange', icon: BookOpen, label: 'Skill Exchange' },
+    { path: '/tech-feed', icon: Newspaper, label: 'Tech Feed' },
+    { path: '/polls', icon: BarChart3, label: 'Polls & Feedback' }
   ];
 
   return (

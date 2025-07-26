@@ -8,6 +8,11 @@ import LostFound from './pages/LostFound.jsx';
 import Timetable from './pages/Timetable.jsx';
 import Complaints from './pages/Complaints.jsx';
 import SkillExchange from './pages/SkillExchange.jsx';
+import OnDuty from './pages/OnDuty.jsx';
+import AIChatbot from './components/AIChatbot.jsx';
+import TechFeed from './pages/TechFeed.jsx';
+import Polls from './pages/Polls.jsx';
+import Canteen from './pages/Canteen.jsx';
 import './App.css';
 
 function App() {
@@ -48,9 +53,14 @@ function App() {
             <Route path="/timetable" element={<Timetable />} />
             <Route path="/complaints" element={<Complaints />} />
             <Route path="/skill-exchange" element={<SkillExchange />} />
+            <Route path="/on-duty" element={<OnDuty />} />
+            <Route path="/tech-feed" element={<TechFeed />} />
+            <Route path="/polls" element={<Polls />} />
+            <Route path="/canteen" element={<Canteen />} />
           </Routes>
         </main>
       </div>
+      <AIChatbot />
     </div>
   );
 }

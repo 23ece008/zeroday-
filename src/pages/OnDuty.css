@@ -1,0 +1,188 @@
+.on-duty-container {
+  max-width: 900px;
+  margin: 2rem auto;
+  background: var(--background, #fff);
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  padding: 2rem;
+}
+.on-duty-container h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-primary, #222);
+}
+.od-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1.2rem;
+}
+.students-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+}
+.student-fields {
+  background: var(--card-background, #f7f7f7);
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  min-width: 180px;
+}
+.od-form label {
+  font-size: 1rem;
+  color: var(--text-secondary, #555);
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+.od-form input[type="text"],
+.od-form input[type="number"],
+.od-form input[type="date"],
+.od-form input[type="file"] {
+  padding: 0.5rem 0.7rem;
+  border: 1px solid var(--border-color, #ccc);
+  border-radius: 6px;
+  font-size: 1rem;
+  margin-top: 0.2rem;
+  background: var(--background, #fff);
+}
+.od-form button[type="submit"] {
+  margin-top: 1rem;
+  background: var(--primary-color, #ff6b35);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.7rem 1.5rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.2s;
+  align-self: flex-end;
+}
+.od-form button[type="submit"]:hover {
+  background: #e55b24;
+}
+.od-admin-list {
+  margin-top: 2rem;
+}
+.od-request-card {
+  background: var(--card-background, #f7f7f7);
+  border-radius: 12px;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.05);
+  padding: 1.2rem;
+  margin-bottom: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+.od-request-card.approved {
+  border-left: 5px solid #2ecc71;
+}
+.od-request-card.rejected {
+  border-left: 5px solid #e74c3c;
+}
+.od-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+.od-actions button {
+  background: var(--primary-color, #ff6b35);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.4rem 1.2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+.od-actions button:hover {
+  background: #e55b24;
+}
+.od-reject-form {
+  display: flex;
+  gap: 0.7rem;
+  margin-top: 0.5rem;
+}
+.od-reject-form input {
+  flex: 1;
+  padding: 0.4rem 0.7rem;
+  border: 1px solid var(--border-color, #ccc);
+  border-radius: 6px;
+  font-size: 1rem;
+}
+.od-reject-form button {
+  background: #e74c3c;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.4rem 1.2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+.od-reject-form button:hover {
+  background: #c0392b;
+}
+.od-rejection {
+  color: #e74c3c;
+  font-weight: 500;
+  margin-top: 0.5rem;
+}
+.payment-label {
+  grid-column: span 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.wide-input {
+  min-width: 180px;
+  width: 100%;
+  max-width: 300px;
+}
+.od-popup {
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background: #2ecc71;
+  color: #fff;
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  font-size: 1.2rem;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+  z-index: 2000;
+  animation: fadeIn 0.3s;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translate(-50%, -20px); }
+  to { opacity: 1; transform: translate(-50%, 0); }
+}
+@media (max-width: 900px) {
+  .form-row {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 600px) {
+  .on-duty-container {
+    padding: 1rem;
+  }
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .students-list {
+    flex-direction: column;
+    gap: 1rem;
+  }
+} 

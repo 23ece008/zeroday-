@@ -1,0 +1,74 @@
+.tech-feed-container {
+  max-width: 900px;
+  margin: 2rem auto;
+  background: var(--background, #fff);
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  padding: 2rem;
+}
+.tech-feed-container h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary, #222);
+}
+.tech-feed-desc {
+  color: var(--text-secondary, #555);
+  margin-bottom: 1.5rem;
+}
+.tech-feed-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+@media (max-width: 700px) {
+  .tech-feed-list {
+    grid-template-columns: 1fr;
+  }
+}
+.tech-feed-card {
+  background: var(--card-background, #f7f7f7);
+  border-radius: 12px;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.05);
+  padding: 1.2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  position: relative;
+}
+.feed-type {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.5rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 0.3rem 0.9rem;
+  border-radius: 8px;
+  color: #fff;
+}
+.feed-type.hackathon {
+  background: #3498db;
+}
+.feed-type.internship {
+  background: #2ecc71;
+}
+.feed-type.tech {
+  background: #8e44ad;
+}
+.feed-type.news, .feed-type.technews {
+  background: #ff6b35;
+}
+.feed-date {
+  font-size: 0.95rem;
+  color: var(--text-secondary, #888);
+}
+.feed-link {
+  color: var(--primary-color, #ff6b35);
+  font-weight: 600;
+  text-decoration: none;
+  margin-top: 0.5rem;
+  align-self: flex-start;
+  transition: color 0.2s;
+}
+.feed-link:hover {
+  color: #e55b24;
+} 

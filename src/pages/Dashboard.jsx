@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Bell, Search, Calendar, MessageSquare, TrendingUp, Users, BookOpen, Star } from 'lucide-react';
+import { Bell, Search, Calendar, MessageSquare, TrendingUp, Users, BookOpen, Star, Briefcase, Newspaper, BarChart3, Utensils } from 'lucide-react';
 import './Dashboard.css';
 
 const Dashboard = () => {
@@ -40,11 +40,43 @@ const Dashboard = () => {
       stats: '3 Pending'
     },
     {
+      title: 'On-Duty',
+      description: 'Submit and manage On-Duty requests',
+      icon: Briefcase,
+      path: '/on-duty',
+      color: '#f39c12',
+      stats: 'OD'
+    },
+    {
       title: 'Skill Exchange Marketplace',
       description: 'List skills you can teach or book peer learning sessions',
       icon: BookOpen,
       path: '/skill-exchange',
       color: '#8e44ad',
+      stats: 'New'
+    },
+    {
+      title: 'Tech Feed',
+      description: 'Curated hackathons, internships, and tech news',
+      icon: Newspaper,
+      path: '/tech-feed',
+      color: '#2980b9',
+      stats: 'Hot'
+    },
+    {
+      title: 'Polls & Feedback',
+      description: 'Create polls and collect student feedback',
+      icon: BarChart3,
+      path: '/polls',
+      color: '#16a085',
+      stats: 'Live'
+    },
+    {
+      title: 'Canteen Prebook',
+      description: 'Pre-order food from college canteen',
+      icon: Utensils,
+      path: '/canteen',
+      color: '#e67e22',
       stats: 'New'
     }
   ];

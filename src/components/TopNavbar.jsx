@@ -7,7 +7,7 @@ const initialProfile = {
   role: 'Computer Science',
   age: '',
   rollNo: '',
-  dept: '',
+  dept: 'CSE',
   section: '',
   mobile: '',
   year: '1st',
@@ -50,7 +50,7 @@ const TopNavbar = ({ onToggleSidebar, theme, onToggleTheme }) => {
           </div>
           <div className="user-info">
             <span className="user-name">{profile.name}</span>
-            <span className="user-role">{profile.role}</span>
+            <span className="user-role">{profile.dept}</span>
           </div>
         </div>
       </div>

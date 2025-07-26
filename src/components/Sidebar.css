@@ -9,6 +9,21 @@
   box-shadow: 2px 0 10px rgba(0,0,0,0.1);
   transition: all 0.3s ease;
   z-index: 1000;
+  overflow-y: auto;
+  max-height: 100vh;
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary-color, #ff6b35) #f1f1f1;
+}
+.sidebar::-webkit-scrollbar {
+  width: 8px;
+}
+.sidebar::-webkit-scrollbar-thumb {
+  background: var(--primary-color, #ff6b35);
+  border-radius: 8px;
+}
+.sidebar::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 8px;
 }
 
 .sidebar.collapsed {
